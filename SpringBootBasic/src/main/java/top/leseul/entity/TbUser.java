@@ -1,6 +1,5 @@
 package top.leseul.entity;
 
-import java.io.Serializable;
 import java.util.Date;
 
 import com.alibaba.fastjson.annotation.JSONField;
@@ -11,7 +10,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author leseul
  *
  */
-public class TbUser implements Serializable {
+public class TbUser extends EntityBase {
 
   private static final long serialVersionUID = -305590941962218841L;
 
@@ -72,12 +71,6 @@ public class TbUser implements Serializable {
 
   public void setRegDate(Date regDate) {
     this.regDate = regDate;
-  }
-
-  @Override
-  public String toString() {
-    return "TbUser [uid=" + uid + ", username=" + username + ", password=" + password + ", nickname=" + nickname
-        + ", isEnable=" + isEnable + ", regDate=" + regDate + "]";
   }
 
   public TbUser(Integer uid, String username, String password, String nickname, String isEnable, Date regDate) {

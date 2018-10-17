@@ -1,10 +1,1 @@
-server:
-  port: 20000
-spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/SpringBootBasic?serverTimezone=GMT&useJDBCCompliantTimezoneShift=true
-    username: leseul
-    password: 94586
-mybatis:
-  config-location: classpath:mybatis-config.xml
+server:  port: 20000spring:  datasource:    driver-class-name: com.mysql.cj.jdbc.Driver    url: jdbc:mysql://127.0.0.1:3306/SpringBootBasic?useSSL=false&serverTimezone=GMT%2b8    username: leseul    password: 94586logging:# file: springbase.log  level:    top:      leseul: debugmybatis:  config-location: classpath:mybatis-config.xml

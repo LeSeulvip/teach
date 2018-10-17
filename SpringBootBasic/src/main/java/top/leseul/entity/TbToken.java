@@ -1,6 +1,5 @@
 package top.leseul.entity;
 
-import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -9,7 +8,7 @@ import java.util.Date;
  * @author leseul
  *
  */
-public class TbToken implements Serializable {
+public class TbToken extends EntityBase {
 
   private static final long serialVersionUID = -33358915632270553L;
 
