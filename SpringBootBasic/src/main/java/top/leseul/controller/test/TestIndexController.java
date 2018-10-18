@@ -41,4 +41,14 @@ public class TestIndexController {
       throw new Exception("标准异常");
     }
   }
+
+  @RequestMapping("/converter")
+  public JsonMessage converter(TestEntity test) throws Exception {
+    // http://127.0.0.1:20000/test/converter
+    // ?info=ab&tint=12&tdouble=289.098&tdec=345.6&tdate=1988-08-13 12:33:33
+    JsonMessage json = JsonMessage.getSuccess("");
+    json.getDatas().put("entity", test);
+    return json;
+  }
+
 }
