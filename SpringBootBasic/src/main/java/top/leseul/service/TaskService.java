@@ -1,7 +1,5 @@
 package top.leseul.service;
 
-import org.springframework.scheduling.annotation.Scheduled;
-
 /**
  * 系统定时任务服务类
  * @author DarkKnight
