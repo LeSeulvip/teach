@@ -22,6 +22,7 @@ public interface TbTokenDAO {
    * 
    * @param token
    * @return
+   * @throws Exception
    */
   int addToken(TbToken token) throws Exception;
 
@@ -30,6 +31,7 @@ public interface TbTokenDAO {
    * 
    * @param token
    * @return
+   * @throws Exception
    */
   int updateToken(TbToken token) throws Exception;
 
@@ -38,8 +40,15 @@ public interface TbTokenDAO {
    * 
    * @param token
    * @return
+   * @throws Exception
    */
   TbToken queryToken(TbToken token) throws Exception;
 
+  /**
+   * 删除过期token
+   * 
+   * @return
+   * @throws Exception
+   */
   int deleteToken() throws Exception;
 }

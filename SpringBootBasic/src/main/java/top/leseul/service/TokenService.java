@@ -19,4 +19,13 @@ public interface TokenService {
    * @throws Exception
    */
   JsonMessage createToken(TbToken token) throws Exception;
+
+  /**
+   * -检查token信息,不存在就创建新的,否则就更新时间
+   * 
+   * @param token 客户端token信息
+   * @return
+   * @throws Exception
+   */
+  TbToken checkTbToken(TbToken token) throws Exception;
 }

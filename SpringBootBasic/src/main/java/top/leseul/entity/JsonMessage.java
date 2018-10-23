@@ -9,7 +9,7 @@ import java.util.Map;
  * @author leseul
  *
  */
-public class JsonMessage extends EntityBase {
+public class JsonMessage extends BaseEntity {
 
   private static final long serialVersionUID = 6424383198789316196L;
 
@@ -108,6 +108,19 @@ public class JsonMessage extends EntityBase {
 
   public void setSuccess(boolean success) {
     this.success = success;
+  }
+
+  /**
+   * -服务器token信息
+   */
+  private String token;
+
+  public String getToken() {
+    return token;
+  }
+
+  public void setToken(String token) {
+    this.token = token;
   }
 
 }

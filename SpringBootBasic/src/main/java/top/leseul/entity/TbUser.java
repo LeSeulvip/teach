@@ -10,7 +10,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author leseul
  *
  */
-public class TbUser extends EntityBase {
+public class TbUser extends BaseEntity {
 
   private static final long serialVersionUID = -305590941962218841L;
 

@@ -10,6 +10,7 @@ import top.leseul.dao.TbTokenDAO;
 import top.leseul.entity.JsonMessage;
 import top.leseul.entity.TbToken;
 import top.leseul.service.TokenService;
+import top.leseul.utils.MyUtils;
 
 /**
  * TbToken的服务 Transactional表示开启事务处理，表示类中的方法调用dao处理数据会在事务中，
@@ -63,6 +64,36 @@ public class TokenServiceImpl implements TokenService {
     JsonMessage message = JsonMessage.getSuccess("");
     message.getDatas().put("token", stoken.getToken());
     return message;
+  }
+
+  /**
+   * -创建新的Token
+   * 
+   * @return
+   * @throws Exception
+   */
+  private TbToken newToken() throws Exception {
+    TbToken token = new TbToken();
+    token.setToken(UUID.randomUUID().toString());
+    tbTokenDAO.addToken(token);
+    return token;
+  }
+
+  @Override
+  public TbToken checkTbToken(TbToken token) throws Exception {
+    // 客户端没有传入token就需要创建新的token
+    if (token == null || MyUtils.isEmpty(token.getToken())) {
+      return newToken();
+    }
+    // 查看
+    TbToken stoken = tbTokenDAO.queryToken(token);
+    if (stoken == null) {
+      // 不存在就重新创建
+      return newToken();
+    }
+    // 存在就更新
+    tbTokenDAO.updateToken(stoken);
+    return stoken;
   }
 
 }

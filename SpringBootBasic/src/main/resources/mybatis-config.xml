@@ -10,5 +10,6 @@
 		<mapper resource="top/leseul/mapper/TbUser.xml" />
     <mapper resource="top/leseul/mapper/Utils.xml" />
     <mapper resource="top/leseul/mapper/TbToken.xml" />
+    <mapper resource="top/leseul/mapper/Test.xml" />
 	</mappers>
 </configuration>

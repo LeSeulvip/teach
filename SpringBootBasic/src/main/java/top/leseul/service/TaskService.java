@@ -1,12 +1,13 @@
-package top.leseul.service;
+  package top.leseul.service;
 
 /**
  * 系统定时任务服务类
+ * 
  * @author DarkKnight
  *
  */
 public interface TaskService {
-  
+
   /**
    * 定时显示当前时间
    */
@@ -17,5 +18,8 @@ public interface TaskService {
    */
   void showTimeOnce();
 
+  /**
+   * 删除所有过期的token
+   */
   void deleteToken();
 }

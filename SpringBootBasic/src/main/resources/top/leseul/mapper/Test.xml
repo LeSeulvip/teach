@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- Test mapper -->
+<mapper namespace="top.leseul.dao.TestDAO">
+  <!-- 分页查询是一对 -->
+  <select id="queryTokens" resultType="TbToken">
+    select token,uid,lastupdate from TbToken
+  </select>
+  <!-- 分页配对查询,必须和queryTokens查询一致,且要补_COUNT ,且并不需要出现在mapper类中 -->
+  <select id="queryTokens_COUNT" resultType="int">
+    select count(*) from TbToken
+  </select>
+</mapper>

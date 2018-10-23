@@ -9,6 +9,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 
+/**
+ * mvc配置
+ * 
+ * @author leseul
+ *
+ */
 @Configuration
 public class MyWebConfig implements WebMvcConfigurer {
   @Override

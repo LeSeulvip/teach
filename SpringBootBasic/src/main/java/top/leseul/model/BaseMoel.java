@@ -1,6 +1,7 @@
 package top.leseul.model;
 
-import top.leseul.entity.EntityBase;
+import top.leseul.entity.BaseEntity;
+import top.leseul.entity.TbToken;
 
 /**
  * model层(获取客户端数据)基础类
@@ -8,7 +9,7 @@ import top.leseul.entity.EntityBase;
  * @author leseul
  *
  */
-public abstract class BaseMoel extends EntityBase {
+public abstract class BaseMoel extends BaseEntity {
 
   private static final long serialVersionUID = 4234166558780897041L;
 
@@ -28,4 +29,14 @@ public abstract class BaseMoel extends EntityBase {
     this.token = token;
   }
 
+  /**
+   * getToken的委托方法,将客户端获取的token信息转递给Tbtoken对象
+   * 
+   * @return
+   */
+  public TbToken makeTokenInfo() {
+    TbToken tbToken = new TbToken();
+    tbToken.setToken(token);
+    return tbToken;
+  }
 }
