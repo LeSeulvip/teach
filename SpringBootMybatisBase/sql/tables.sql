@@ -18,7 +18,7 @@ create table TbConfig
 
 
 /*用户表*/
-create table TbUSer
+create table TbUser
 (
   uid int auto_increment primary key comment '用户id,主键',
   username varchar(50) unique not null comment '用户名',
