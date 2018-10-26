@@ -39,7 +39,7 @@ public class ControllerLogger {
    * 
    * @param jp
    */
-  @Before("pointcut()")
+  @Before("controller()")
   public void before(JoinPoint jp) {
     // getSignature方法会返回切点拦截的方法前面
     log.debug("将要执行:" + jp.getSignature());
@@ -63,7 +63,7 @@ public class ControllerLogger {
    * 
    * @param jp
    */
-  @After("pointcut()")
+  @After("controller()")
   public void after(JoinPoint jp) {
     log.debug("执行的" + jp.getSignature() + "完毕!");
 
