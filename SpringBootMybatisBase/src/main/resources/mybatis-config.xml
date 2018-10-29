@@ -10,5 +10,7 @@
     <mapper resource="top/leseul/springbootmybatisase/mapper/Utils.xml" />
     <mapper resource="top/leseul/springbootmybatisase/mapper/TbToken.xml" />
     <mapper resource="top/leseul/springbootmybatisase/mapper/TbUser.xml" />
+    <mapper resource="top/leseul/springbootmybatisase/mapper/TbTokenInfo.xml" />
+    <mapper resource="top/leseul/springbootmybatisase/mapper/Test.xml" />
   </mappers>
 </configuration>

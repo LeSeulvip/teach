@@ -16,7 +16,9 @@ import top.leseul.springbootmybatisbase.utils.JsonMessage;
  */
 @RestController
 @RequestMapping("/test")
-public class TestController implements NeedLogin{
+public class TestController implements NeedLogin {
+
+
   private TbUser user;
 
   @Override
@@ -26,11 +28,13 @@ public class TestController implements NeedLogin{
 
   @RequestMapping("/index")
   public JsonMessage index(TestModel model) throws Exception {
-    //http://127.0.0.1:20001/test/index
+    // http://127.0.0.1:20001/test/index
     JsonMessage message = JsonMessage.getSuccess("测试NeedLogin接口");
     // 可以直接拿到登录的user信息
     message.getDatas().put("user", user);
     return message;
   }
+
+  
 
 }

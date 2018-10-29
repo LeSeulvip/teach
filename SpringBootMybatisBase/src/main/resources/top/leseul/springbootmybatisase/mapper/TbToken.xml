@@ -4,7 +4,6 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- TbToken mapper -->
 <mapper namespace="top.leseul.springbootmybatisbase.dao.TbTokenDAO">
-
   <!-- 查询token是否存在且是否有效 -->
   <select id="queryToken" parameterType="TbToken" resultType="TbToken">
     select token,uid,lastupdate from TbToken
