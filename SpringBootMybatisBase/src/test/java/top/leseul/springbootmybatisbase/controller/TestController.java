@@ -18,7 +18,6 @@ import top.leseul.springbootmybatisbase.utils.JsonMessage;
 @RequestMapping("/test")
 public class TestController implements NeedLogin {
 
-
   private TbUser user;
 
   @Override

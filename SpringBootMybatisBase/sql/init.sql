@@ -8,7 +8,7 @@ truncate table TbTokenInfo;
 
 
 /*系统配置数据*/
-insert into TbConfig(configKey,configValue,lastupdate) values('token.timeout','30',now());
+insert into TbConfig(configKey,configValue,lastupdate) values('token.timeout','10',now());
 
 /*默认测试用户*/
 insert into TbUser(username,password,nickname) values('test','test-pwd','测试用户');
