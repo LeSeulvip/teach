@@ -31,7 +31,7 @@ public class BaseModel extends BaseEntity {
    * 
    * @return
    */
-  public TbToken getTbToken() {
+  public TbToken MakeTbToken() {
     TbToken tbToken = new TbToken();
     tbToken.setToken(token);
     return tbToken;
@@ -42,7 +42,7 @@ public class BaseModel extends BaseEntity {
    * 
    * @return
    */
-  public TbTokenInfo getTbTokenInfo() {
+  public TbTokenInfo MakeTbTokenInfo() {
     TbTokenInfo tokenInfo = new TbTokenInfo();
     tokenInfo.setToken(token);
     return tokenInfo;

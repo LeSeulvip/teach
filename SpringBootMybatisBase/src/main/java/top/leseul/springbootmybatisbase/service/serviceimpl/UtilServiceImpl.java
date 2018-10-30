@@ -23,7 +23,7 @@ public class UtilServiceImpl implements UtilService {
     // 产生图片校验码
     String code = ImageCode.makeCode();
     // 获取图片校验码
-    TbTokenInfo tokenInfo = model.getTbTokenInfo();
+    TbTokenInfo tokenInfo = model.MakeTbTokenInfo();
     // 判断图片校验码是否存在
     TbTokenInfo sinfo = tbTokenInfoDAO.queryImageCode(tokenInfo);
     if (sinfo == null) {

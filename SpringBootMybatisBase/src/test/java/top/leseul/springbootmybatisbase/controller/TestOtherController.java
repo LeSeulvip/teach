@@ -44,7 +44,7 @@ public class TestOtherController {
   public JsonMessage imageCode(TestModel model) throws Exception {
     // http://127.0.0.1:20001/test/imageCode?token=&imageCode
     // 获取获取校验码
-    TbTokenInfo info = model.getTbTokenInfo();
+    TbTokenInfo info = model.MakeTbTokenInfo();
     info.setInfo(model.getImageCode());
     // 校验
     boolean check = utilService.checkImageCode(info);
